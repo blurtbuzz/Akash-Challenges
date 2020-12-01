@@ -26,7 +26,7 @@
 
 - Fork this repo: https://github.com/ovrclk/ecosystem
 - cd
-- git clone https://github.com/<user>/ecosystem.git
+- git clone https://github.com/YOUR_GIT_ACCOUNT/ecosystem.git
 - cd ecosystem
 - curl -s https://raw.githubusercontent.com/ovrclk/docs/master/guides/deploy/deploy.yml > deploy.yml
 - akash tx deployment create deploy.yml --from $KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID -y
