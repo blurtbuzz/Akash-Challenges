@@ -1,4 +1,8 @@
 # Akash-Challenges
+
+## Challenge 1 
+---
+
 ### Installations:
 * git clone https://github.com/blurtbuzz/Akash-Challenges.git
 * cd Akash-Challenges
