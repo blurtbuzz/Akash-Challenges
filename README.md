@@ -2,7 +2,7 @@
 ### Installations:
 * git clone https://github.com/blurtbuzz/Akash-Challenges.git
 * cd Akash-Challenges
-* bash ./install.sh
+* . ./install.sh
 
 ### Create Wallet:
 
