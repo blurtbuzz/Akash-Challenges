@@ -1,9 +1,10 @@
 # Akash-Challenges
-git clone https://github.com/blurtbuzz/Akash-Challenges.git
-cd Akash-Challenges
-bash ./install.sh
+### Installations:
+* git clone https://github.com/blurtbuzz/Akash-Challenges.git
+* cd Akash-Challenges
+* bash ./install.sh
 
-Create Wallet:
+### Create Wallet:
 
 - export KEY_NAME="ericet"
 - export KEYRING_BACKEND="os"
