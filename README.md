@@ -1,6 +1,6 @@
 # Akash-Challenges
 
-## Challenge 1 
+## [Challenge 1](https://docs.akash.network/v/master/testnet-challenges/testnet-challenges/guided-deployments#challenge-1-week-1) 
 ---
 
 ### Installations:
