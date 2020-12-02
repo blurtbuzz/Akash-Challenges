@@ -177,7 +177,7 @@
 * Copy the uris from above(eg: "zke3b5enbvvzdh34wpohv9.provider3.akashdev.net"), and run the following command:
 * export DEPLOYMENT_HOST="URIS_FROM_ABOVE"
     * eg: export DEPLOYMENT_HOST="zke3b5enbvvzdh34wpohv9.provider3.akashdev.net"
-
+* akash --node "tcp://$DEPLOYMENT_HOST:80" status
 - Go to https://app.akash.network/
 - Go to Earn Token Rewards and copy the Participant Code
 - export CODE=YOUR_PARTICIPANT_CODE
