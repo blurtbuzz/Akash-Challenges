@@ -67,25 +67,15 @@
 * cd Akash-Challenges
 * . ./install.sh
 
-### Create Wallet:
+### Setup Wallet:
 
 - export KEY_NAME="ANY_KEY_NAME"
 - export KEYRING_BACKEND="os"
-- akash --keyring-backend "$KEYRING_BACKEND" keys add "$KEY_NAME"
-    - Enter keyring passphrase(password to unlock your wallet)
 - export ACCOUNT_ADDRESS="$(akash keys show $KEY_NAME -a)"
 
-### Funding Account
-
-- Go to https://akash.vitwit.com/faucet and enter your address to receive funds
-- Check account balance:
-    - akash --node "$AKASH_NODE" query bank balances "$ACCOUNT_ADDRESS"
 
 ### Deploy Your App:
-
-- Fork this repo: https://github.com/ovrclk/ecosystem
 - cd
-- git clone https://github.com/YOUR_GIT_ACCOUNT/ecosystem.git
 - cd ecosystem
 - curl -s https://raw.githubusercontent.com/ovrclk/docs/335978772efddd76215adadcd6fa4d13464ddff7/testnet-challenges/deploy-1-2.yaml > deploy.yml
 - akash tx deployment create deploy.yml --from $KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID -y
@@ -112,7 +102,7 @@
 - export OSEQ=GENERATED_VALUE_FROM_ABOVE
 - export OWNER=GENERATED_VALUE_FROM_ABOVE
 - export PROVIDER=GENERATED_VALUE_FROM_ABOVE
-- Go to https://app.akash.network/signup?ref=dddzdxlvw0fsrv9 and register an account
+- Go to https://app.akash.network/
 - Go to Earn Token Rewards and copy the Participant Code
 - export CODE=YOUR_PARTICIPANT_CODE
 - akash query market lease get --dseq $DSEQ --gseq $GSEQ --oseq $OSEQ --provider $PROVIDER --owner $ACCOUNT_ADDRESS --node $AKASH_NODE -o json > akashian/phase3/challenge2/$CODE.json
