@@ -203,6 +203,9 @@
 ### Deploy Your App:
 - cd
 - cd ecosystem
+* git remote add upstream https://github.com/ovrclk/ecosystem.git
+* git fetch upstream
+* git pull upstream master
 - curl -s https://raw.githubusercontent.com/ovrclk/docs/02995cca8d90a6bdf1bec896c6e28b6e51cb58ee/testnet-challenges/deploy-2-1.yaml > deploy.yml
 - akash tx deployment create deploy.yml --from $KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID -y
 - akash query market lease list --owner $ACCOUNT_ADDRESS --node $AKASH_NODE --state active
