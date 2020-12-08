@@ -183,3 +183,53 @@
 - export CODE=YOUR_PARTICIPANT_CODE
 - akash query market lease get --dseq $DSEQ --gseq $GSEQ --oseq $OSEQ --provider $PROVIDER --owner $ACCOUNT_ADDRESS --node $AKASH_NODE -o json > akashian/phase3/challenge3/$CODE.json
 - Commit your change and make a pull request
+
+
+## [Challenge 4](https://docs.akash.network/v/master/testnet-challenges/testnet-challenges/guided-deployments#challenge-1-week-2) 
+---
+
+### Installations:
+* git clone https://github.com/blurtbuzz/Akash-Challenges.git
+* cd Akash-Challenges
+* . ./setup.sh
+
+### Setup Wallet:
+
+- export KEY_NAME="ANY_KEY_NAME"
+- export KEYRING_BACKEND="os"
+- export ACCOUNT_ADDRESS="$(akash keys show $KEY_NAME -a)"
+
+
+### Deploy Your App:
+- cd
+- cd ecosystem
+- curl -s https://raw.githubusercontent.com/ovrclk/docs/02995cca8d90a6bdf1bec896c6e28b6e51cb58ee/testnet-challenges/deploy-2-1.yaml > deploy.yml
+- akash tx deployment create deploy.yml --from $KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID -y
+- akash query market lease list --owner $ACCOUNT_ADDRESS --node $AKASH_NODE --state active
+    - Wait for your Lease
+
+    leases:
+    - lease_id:
+        dseq: "47714"
+        gseq: 1
+        oseq: 1
+        owner: akash1nyxtwy6y0crnvrfmctfjyaljzu8y4xc46398ah
+        provider: akash174hxdpuxsuys9qkauaf57ym5j8dm4secnz6jd7
+      price:
+        amount: "43"
+        denom: uakt
+      state: active
+    pagination:
+      next_key: null
+      total: "0"
+
+- export DSEQ=GENERATED_VALUE_FROM_ABOVE
+- export GSEQ=GENERATED_VALUE_FROM_ABOVE
+- export OSEQ=GENERATED_VALUE_FROM_ABOVE
+- export OWNER=GENERATED_VALUE_FROM_ABOVE
+- export PROVIDER=GENERATED_VALUE_FROM_ABOVE
+- Go to https://app.akash.network/
+- Go to Earn Token Rewards and copy the Participant Code
+- export CODE=YOUR_PARTICIPANT_CODE
+- akash query market lease get --dseq $DSEQ --gseq $GSEQ --oseq $OSEQ --provider $PROVIDER --owner $ACCOUNT_ADDRESS --node $AKASH_NODE -o json > akashian/phase3/challenge4/$CODE.json
+- Commit your change and make a pull request
